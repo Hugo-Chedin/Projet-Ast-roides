@@ -45,7 +45,13 @@ def run():
 if core.getKeyPressList("SPACE"):
     if len(core.memory("projectiles")) > 0:
         if time.time() - core.memory("projectiles")[-1]["startTime"] > 0.01:
-            creationProjectiles()
+            creationProjectile()
 
-        else creationProjectiles()
+        else :
+            creationProjectile()
+
+core.memory("position"), core.memory("position") + core.memory("vitesse"))
+for p in core.memory("projectiles"):
+    p["position"] = p["position"] + p["vitesse"]
+
     
